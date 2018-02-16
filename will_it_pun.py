@@ -29,7 +29,7 @@ class PhonemeDictionary:
 		if phoneme in self.phonemes_to_words:
 			self.phonemes_to_words[phoneme].add(word)
 		else:
-				self.phonemes_to_words[phoneme] = { word }
+			self.phonemes_to_words[phoneme] = { word }
 		
 		if word in self.words_to_phonemes:
 			self.words_to_phonemes[word].add(phoneme)
@@ -112,4 +112,4 @@ if __name__ == "__main__":
 	
 	# TODO consider leveraging NLTK to determine pun probability
 	for pun in sorted(puns):
-			print(pun)
+		print(pun)
