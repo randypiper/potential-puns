@@ -10,7 +10,7 @@ class PhonemeDictionary:
 	def __init__(self, phoneme_dict_file):
 		self.phonemes_to_words = {}
 		self.words_to_phonemes = {}
-		self._parse_phonemem_dict_file(phoneme_dict_file)
+		self._parse_phoneme_dict_file(phoneme_dict_file)
 
 	def get_words(self, phoneme):
 		return self.phonemes_to_words.get(phoneme)
@@ -20,7 +20,7 @@ class PhonemeDictionary:
 		return self.words_to_phonemes.get(word)
 
 
-	def _parse_phonemem_dict_file(self, phoneme_dict_file):
+	def _parse_phoneme_dict_file(self, phoneme_dict_file):
 		pattern = re.compile(r"(?P<word>.*?)\s\s(?P<phoneme>.*?)\n")
 
 		with open(phoneme_dict_file) as f:
