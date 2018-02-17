@@ -52,7 +52,13 @@ if __name__ == "__main__":
 	phoneme_dict = PhonemeDictionary(phoneme_file)
 	pun_generator = PunGenerator(phoneme_dict)
 
-	puns = pun_generator.generate_puns(args.phrase.upper())
+	phrase = args.phrase.upper()
+	for word in phrase.split(" "):
+		if phoneme_dict.get_phonemes(word) is None:
+			print("\"" + word + "\" was not found in the phoneme dictionary.")
+			sys.exit(1)
+
+	puns = pun_generator.generate_puns(phrase)
 
 	# TODO consider leveraging NLTK to determine pun probability
 	for pun in sorted(puns):
