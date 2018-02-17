@@ -1,10 +1,11 @@
+import collections
 import itertools
 
 class PunGenerator:
 
 	def __init__(self, phoneme_dict):
 		self.phoneme_dict = phoneme_dict
-		self.computed_puns = {}
+		self.computed_puns = collections.defaultdict(set)
 
 
 	def generate_puns(self, pun_target):
@@ -40,10 +41,7 @@ class PunGenerator:
 
 
 	def _add_pun(self, phoneme, words):
-		if phoneme in self.computed_puns:
-			self.computed_puns[phoneme].update(words)
-		else:
-			self.computed_puns[phoneme] = words
+		self.computed_puns[phoneme].update(words)
 
 
 	def _convert_phrase_to_possible_phonemes(self, phrase):

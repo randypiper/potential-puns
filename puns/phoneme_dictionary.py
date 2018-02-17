@@ -1,10 +1,11 @@
+import collections
 import re
 
 class PhonemeDictionary:
 
 	def __init__(self, phoneme_dict_file):
-		self.phonemes_to_words = {}
-		self.words_to_phonemes = {}
+		self.phonemes_to_words = collections.defaultdict(set)
+		self.words_to_phonemes = collections.defaultdict(set)
 		self._parse_phoneme_dict_file(phoneme_dict_file)
 
 	def get_words(self, phoneme):
@@ -30,15 +31,8 @@ class PhonemeDictionary:
 
 
 	def _add(self, phoneme, word):
-		if phoneme in self.phonemes_to_words:
 			self.phonemes_to_words[phoneme].add(word)
-		else:
-			self.phonemes_to_words[phoneme] = { word }
-
-		if word in self.words_to_phonemes:
 			self.words_to_phonemes[word].add(phoneme)
-		else:
-			self.words_to_phonemes[word] = { phoneme }
 
 
 	def _normalize_word(self, word):
@@ -48,4 +42,4 @@ class PhonemeDictionary:
 
 
 	def _normalize_phoneme(self, phoneme):
-		return phoneme.strip()
+		return re.sub("\d", "", phoneme)
