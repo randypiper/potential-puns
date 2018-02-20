@@ -1,0 +1,89 @@
+digraph {
+	KNOPE0 [label=KNOPE]
+	A1 [label=A]
+	KNOPE0 -> A1
+	KNIN2 [label=KNIN]
+	A1 -> KNIN2
+	TEN3 [label=TEN]
+	KNIN2 -> TEN3
+	DID4 [label=DID]
+	TEN3 -> DID4
+	TEND3 [label=TEND]
+	KNIN2 -> TEND3
+	ID4 [label=ID]
+	TEND3 -> ID4
+	IHDE4 [label=IHDE]
+	TEND3 -> IHDE4
+	TENDED3 [label=TENDED]
+	KNIN2 -> TENDED3
+	TENN3 [label=TENN]
+	KNIN2 -> TENN3
+	TENN3 -> DID4
+	AN1 [label=AN]
+	KNOPE0 -> AN1
+	IN2 [label=IN]
+	AN1 -> IN2
+	IN2 -> TEN3
+	IN2 -> TEND3
+	IN2 -> TENDED3
+	IN2 -> TENN3
+	INN2 [label=INN]
+	AN1 -> INN2
+	INN2 -> TEN3
+	INN2 -> TEND3
+	INN2 -> TENDED3
+	INN2 -> TENN3
+	INTEND2 [label=INTEND]
+	AN1 -> INTEND2
+	ID3 [label=ID]
+	INTEND2 -> ID3
+	IHDE3 [label=IHDE]
+	INTEND2 -> IHDE3
+	INTENDED2 [label=INTENDED]
+	AN1 -> INTENDED2
+	N1 [label=N]
+	KNOPE0 -> N1
+	N1 -> IN2
+	N1 -> INN2
+	N1 -> INTEND2
+	N1 -> INTENDED2
+	UH1 [label=UH]
+	KNOPE0 -> UH1
+	UH1 -> KNIN2
+	UHH1 [label=UHH]
+	KNOPE0 -> UHH1
+	UHH1 -> KNIN2
+	UN1 [label=UN]
+	KNOPE0 -> UN1
+	UN1 -> IN2
+	UN1 -> INN2
+	UN1 -> INTEND2
+	UN1 -> INTENDED2
+	UNINTENDED1 [label=UNINTENDED]
+	KNOPE0 -> UNINTENDED1
+	KNOW0 [label=KNOW]
+	PUN1 [label=PUN]
+	KNOW0 -> PUN1
+	PUN1 -> IN2
+	PUN1 -> INN2
+	PUN1 -> INTEND2
+	PUN1 -> INTENDED2
+	NAU0 [label=NAU]
+	NAU0 -> PUN1
+	NEAULT0 [label=NEAULT]
+	NEAULT0 -> PUN1
+	NO0 [label=NO]
+	NO0 -> PUN1
+	NOE0 [label=NOE]
+	NOE0 -> PUN1
+	NOH0 [label=NOH]
+	NOH0 -> PUN1
+	NOPE0 [label=NOPE]
+	NOPE0 -> A1
+	NOPE0 -> AN1
+	NOPE0 -> N1
+	NOPE0 -> UH1
+	NOPE0 -> UHH1
+	NOPE0 -> UN1
+	NOPE0 -> UNINTENDED1
+}
