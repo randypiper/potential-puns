@@ -31,9 +31,6 @@ class PhonemeDictionary:
 
                 match = pattern.match(line)
                 word = self._normalize_word(match.group("word"))
-                if word is None:
-                    print line
-                    print
                 phonemes = self._normalize_phoneme(match.group("phoneme"))
                 self._add(phonemes, word)
 

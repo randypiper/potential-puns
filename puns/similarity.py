@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 
 class SimilarityMatrix(object):
     """
-    Shit for calculating similarity
+    For calculating phonetic similarity
     """
 
     def __init__(self, phoneme_dictionary):
@@ -29,7 +29,7 @@ class SimilarityMatrix(object):
         total = 0.0
 
         for pro1, pro2 in pairs:
-            seq1, seq2 = get_aligments(pro1.split(), pro2.split())
+            seq1, seq2 = get_alignments(pro1.split(), pro2.split())
             for phoneme in seq1 + seq2:
                 if phoneme is not None:
                     frequency_counter[phoneme] += 1
@@ -106,7 +106,7 @@ def levenshtein(left, right):
     return 1 if left == right else -1
 
 
-def get_aligments(seq1, seq2, gap_penalty=-1, similarity_func=levenshtein):
+def get_alignments(seq1, seq2, gap_penalty=-1, similarity_func=levenshtein):
     """
     Returns a pair of sequences after seq1 and seq2 have
     been aligned, using the the Needleman Wunsch algorithm. `None` is
